@@ -18,7 +18,6 @@ END WRITE_LOG;
 BEGIN
   dbms_output.ENABLE(100);
  IDH_APPLIC.UPDATE_PULLBACK_RESPONSE_FLAG;
-WRITE_LOG ('Pullback Site rollout table is COMPLETED');
 
 COMMIT;
 
