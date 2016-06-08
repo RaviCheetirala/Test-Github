@@ -9,14 +9,14 @@ BEGIN
     WHEN OTHERS THEN
     IF SQLCODE = -20000 THEN
       dbms_output.DISABLE();
-      dbms_output.ENABLE(1000000);
+      dbms_output.ENABLE(1000);
       dbms_output.PUT_LINE (p_logMessage);
     END IF;
   END;                          
 END WRITE_LOG;
 
 BEGIN
-  dbms_output.ENABLE(1000000);
+  dbms_output.ENABLE(1000);
  IDH_APPLIC.UPDATE_PULLBACK_RESPONSE_FLAG;
 WRITE_LOG ('Pullback Site rollout table is COMPLETED');
 
