@@ -7,7 +7,7 @@ BEGIN
     dbms_output.PUT_LINE (p_logMessage);
     EXCEPTION
     WHEN OTHERS THEN
-    IF SQLCODE = -20000 THEN
+    IF SQLCODE = -40000 THEN
       dbms_output.DISABLE();
       dbms_output.ENABLE(1000);
       dbms_output.PUT_LINE (p_logMessage);
@@ -16,7 +16,7 @@ BEGIN
 END WRITE_LOG;
 
 BEGIN
-  dbms_output.ENABLE(1000);
+  dbms_output.ENABLE(100);
  IDH_APPLIC.UPDATE_PULLBACK_RESPONSE_FLAG;
 WRITE_LOG ('Pullback Site rollout table is COMPLETED');
 
