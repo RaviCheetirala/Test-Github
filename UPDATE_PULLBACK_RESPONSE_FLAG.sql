@@ -7,7 +7,7 @@ BEGIN
     dbms_output.PUT_LINE (p_logMessage);
     EXCEPTION
     WHEN OTHERS THEN
-    IF SQLCODE = -40000 THEN
+    IF SQLCODE = -20000 THEN
       dbms_output.DISABLE();
       dbms_output.ENABLE(1000);
       dbms_output.PUT_LINE (p_logMessage);
